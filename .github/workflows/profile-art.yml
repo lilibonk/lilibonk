@@ -1,0 +1,55 @@
+name: Profile artwork
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 1 * * *'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/profile-art.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-artwork
+  cancel-in-progress: false
+
+jobs:
+  contributions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out profile
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Animate the public contribution graph
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3.5.0
+        with:
+          github_user_name: lilibonk
+          outputs: |
+            dist/contributions-light.svg?color_snake=#C99439&color_dots=#F2EDE4,#F0DDBB,#DAB982,#B98A46,#835B25
+            dist/contributions-dark.svg?palette=github-dark&color_snake=#EBC16D&color_dots=#1C222B,#463D2D,#776035,#AC8348,#DFC078
+
+      - name: Publish generated images
+        shell: bash
+        run: |
+          set -euo pipefail
+          publish_dir="$RUNNER_TEMP/profile-generated"
+          if git ls-remote --exit-code --heads origin refs/heads/codex/profile-generated >/dev/null; then
+            git fetch --depth=1 origin codex/profile-generated
+            git worktree add --detach "$publish_dir" FETCH_HEAD
+          else
+            git worktree add --detach "$publish_dir" HEAD
+            git -C "$publish_dir" checkout --orphan codex/profile-generated
+            git -C "$publish_dir" rm -rf --quiet .
+          fi
+          cp dist/contributions-*.svg "$publish_dir/"
+          git -C "$publish_dir" config user.name 'github-actions[bot]'
+          git -C "$publish_dir" config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C "$publish_dir" add contributions-light.svg contributions-dark.svg
+          if ! git -C "$publish_dir" diff --cached --quiet; then
+            git -C "$publish_dir" commit -m 'chore: refresh public contribution artwork'
+            git -C "$publish_dir" push origin HEAD:refs/heads/codex/profile-generated
+          fi
