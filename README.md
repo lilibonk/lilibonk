@@ -52,10 +52,22 @@
 
 [了解项目](https://github.com/lilibonk/apocalypse#readme) · [查看发行候选 v0.1.0-rc.1](https://github.com/lilibonk/apocalypse/releases/tag/v0.1.0-rc.1) · [开始使用](https://github.com/lilibonk/apocalypse/blob/main/docs/getting-started.md)
 
-### 02 / Agent 工具 · 让工作流更顺手
+### 02 / Agent 工具 · [pi-pane](https://github.com/lilibonk/pi-pane)
 
-- **[Hermes Atomic Arsenal](https://github.com/lilibonk/hermes-atomic-arsenal)** — Hermes 的本地插件、技能与任务循环模板，集中管理自己的扩展。
-- **[Hermes Cron Memory Ingestor](https://github.com/lilibonk/hermes-cron-memory-ingestor)** — 把定时任务的最终回复接入 Hindsight，留下可回顾的工作结果。
+在 pi 终端里输入 `/web`，浏览器就接上正在运行的同一个会话：实时输出、工具卡片、按词高亮的 diff，也能发消息和图片。手机、平板可通过 HTTPS 和访问密码连接，终端照常可用。
+
+`TypeScript` · `Preact` · `WebSocket`
+
+<details>
+<summary>展开浏览器会话预览</summary>
+
+<a href="https://github.com/lilibonk/pi-pane#readme">
+  <img src="https://raw.githubusercontent.com/lilibonk/pi-pane/main/docs/preview.png" alt="pi-pane 浏览器会话预览：实时输出、工具卡片与 diff。" width="100%">
+</a>
+
+</details>
+
+[了解项目与安装说明](https://github.com/lilibonk/pi-pane#readme) · [设计与运行边界](https://github.com/lilibonk/pi-pane/blob/main/docs/design.md)
 
 ### 03 / 创意实验 · [Codex Pet Collection](https://github.com/lilibonk/codex-pet-collection)
 
