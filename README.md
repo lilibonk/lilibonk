@@ -1,104 +1,102 @@
+# 狸狸咚的 space
+
+**写点有用的工具，养点没用但可爱的电子宠物。**
+
+欢迎来串门。我是狸狸咚，日常写代码，偶尔跟报错讲道理。
+
 <picture>
   <source media="(prefers-color-scheme: dark) and (prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/lilibonk/lilibonk/main/assets/workshop-night.png">
   <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/lilibonk/lilibonk/main/assets/workshop-day.png">
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lilibonk/lilibonk/main/assets/workshop-night.gif">
-  <img src="https://raw.githubusercontent.com/lilibonk/lilibonk/main/assets/workshop-day.gif" alt="狸狸咚的开发桌：暖金色像素猫趴在键盘旁，轻轻眨眼。" width="100%">
+  <img src="https://raw.githubusercontent.com/lilibonk/lilibonk/main/assets/workshop-day.gif" alt="space 的常驻居民：暖金色像素猫趴在键盘旁，轻轻眨眼。" width="100%">
 </picture>
-
-# 狸狸咚的开发工作室
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lilibonk/lilibonk/main/assets/intro-typing-dark.svg">
-  <img src="https://raw.githubusercontent.com/lilibonk/lilibonk/main/assets/intro-typing-light.svg" alt="Build useful things. Explore agent workflows. Keep a little room for play." width="480" height="32">
-</picture>
-
-**认真造工具，偶尔养电子宠物。**
-
-我是狸狸咚。这里放着我在做的软件、Agent 工具，还有一些让开发日常更有趣的小东西。
-
-[精选作品](#user-content-精选作品) · [最近交付](#user-content-最近交付) · [代码足迹](#user-content-代码足迹)
 
 ## 精选作品
 
-### 01 / 软件工程 · [Apocalypse](https://github.com/lilibonk/apocalypse)
+| 你想做什么 | 从这里开始 |
+| :--- | :--- |
+| 在浏览器里用 pi，查看 AI 的工作现场 | [**pi-pane**](#user-content-pi-pane) |
+| 开发业务后台，少从登录和权限重新写起 | [**Apocalypse**](#user-content-apocalypse) |
+| 给 Codex 找个搭子，等回复时有宠可看 | [**Codex Pet Collection**](#user-content-codex-pet-collection) |
 
-给管理系统一个清楚的起点：模块化单体后端、React 管理控制台，以及可检查的构建与交付流程。
+### pi-pane
 
-`Java 25` · `Spring Boot 4.1` · `React 19`
+**给 pi Coding Agent 开一扇浏览器窗口。**
 
-[![发行版本](https://img.shields.io/github/v/release/lilibonk/apocalypse?include_prereleases&style=flat-square&color=B98232&label=release)](https://github.com/lilibonk/apocalypse/releases)
-[![构建状态](https://github.com/lilibonk/apocalypse/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/lilibonk/apocalypse/actions/workflows/ci.yml)
+终端输入 `/web`，浏览器就接上同一个会话。看实时回复、工具调用和代码 diff，也能发消息、传图片。
 
-<details>
-<summary>展开控制台与登录界面预览</summary>
+> 终端继续干活，眼睛换个宽敞工位。
 
-**管理控制台**
+<a href="https://github.com/lilibonk/pi-pane#readme">
+  <img src="https://raw.githubusercontent.com/lilibonk/pi-pane/main/docs/preview.png" alt="pi-pane 浏览器会话界面示例：AI 回复、工具执行卡片、代码 diff 和消息输入框。" width="640">
+</a>
+
+**[安装与使用 →](https://github.com/lilibonk/pi-pane#readme)**　[设计说明](https://github.com/lilibonk/pi-pane/blob/main/docs/design.md)
+
+<sub>TypeScript / Preact / WebSocket · 源码可试用，使用时需保持 pi 终端运行。</sub>
+
+---
+
+### Apocalypse
+
+**业务后台的起步包，登录和权限已经到岗。**
+
+Java + React 管理系统基础项目。用户、角色、部门、菜单和审计已有现成界面，接着往里加自己的业务模块就好。
+
+> 名字像末日，干的是搭后台的活。
 
 <a href="https://github.com/lilibonk/apocalypse#readme">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lilibonk/apocalypse/main/.github/assets/readme/admin-dark.jpg">
-    <img src="https://raw.githubusercontent.com/lilibonk/apocalypse/main/.github/assets/readme/admin-light.jpg" alt="Apocalypse 用户管理界面：导航、筛选与操作表格，画面中的数据均为示例。" width="100%">
+    <img src="https://raw.githubusercontent.com/lilibonk/apocalypse/main/.github/assets/readme/admin-light.jpg" alt="Apocalypse 用户管理界面：左侧功能导航、筛选条件与用户操作表格，数据均为示例。" width="100%">
   </picture>
 </a>
 
-**登录界面**
+**[快速开始 →](https://github.com/lilibonk/apocalypse/blob/main/docs/getting-started.md)**　[查看源码](https://github.com/lilibonk/apocalypse)　[发行候选 v0.1.0-rc.1](https://github.com/lilibonk/apocalypse/releases/tag/v0.1.0-rc.1)
+
+<sub>Java 25 / Spring Boot 4.1 / React 19 · 当前为预发布版本。</sub>
+
+<details>
+<summary>再看一眼登录页</summary>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lilibonk/apocalypse/main/.github/assets/readme/login-dark.jpg">
-  <img src="https://raw.githubusercontent.com/lilibonk/apocalypse/main/.github/assets/readme/login-light.jpg" alt="Apocalypse 登录界面预览。" width="100%">
+  <img src="https://raw.githubusercontent.com/lilibonk/apocalypse/main/.github/assets/readme/login-light.jpg" alt="Apocalypse 登录页预览。" width="100%">
 </picture>
 
 </details>
 
-[了解项目](https://github.com/lilibonk/apocalypse#readme) · [查看发行候选 v0.1.0-rc.1](https://github.com/lilibonk/apocalypse/releases/tag/v0.1.0-rc.1) · [开始使用](https://github.com/lilibonk/apocalypse/blob/main/docs/getting-started.md)
+---
 
-### 02 / Agent 工具 · [pi-pane](https://github.com/lilibonk/pi-pane)
+### Codex Pet Collection
 
-在 pi 终端里输入 `/web`，浏览器就接上正在运行的同一个会话：实时输出、工具卡片、按词高亮的 diff，也能发消息和图片。手机、平板可通过 HTTPS 和访问密码连接，终端照常可用。
+**给 Codex 配几位桌面搭子。**
 
-`TypeScript` · `Preact` · `WebSocket`
+可安装的自定义动画宠物合集，附带预览和命令行安装工具。选一只，让等回复的时间多一点表情。
 
-<details>
-<summary>展开浏览器会话预览</summary>
-
-<a href="https://github.com/lilibonk/pi-pane#readme">
-  <img src="https://raw.githubusercontent.com/lilibonk/pi-pane/main/docs/preview.png" alt="pi-pane 浏览器会话预览：实时输出、工具卡片与 diff。" width="100%">
-</a>
-
-</details>
-
-[了解项目与安装说明](https://github.com/lilibonk/pi-pane#readme) · [设计与运行边界](https://github.com/lilibonk/pi-pane/blob/main/docs/design.md)
-
-### 03 / 创意实验 · [Codex Pet Collection](https://github.com/lilibonk/codex-pet-collection)
-
-可安装的 Codex 自定义宠物集合，附带预览和命令行安装工具。给开发桌添一点性格。
-
-<details>
-<summary>展开宠物动画 · Aira &amp; Airi</summary>
+> 不写代码，不催进度，也不用铲屎。
 
 <table>
   <tr>
-    <td align="center"><img src="https://raw.githubusercontent.com/lilibonk/codex-pet-collection/main/pets/aira-xinghui/preview/idle.gif" alt="艾拉·星辉待机动画。" width="96"><br><sub>Aira · 星辉</sub></td>
-    <td align="center"><img src="https://raw.githubusercontent.com/lilibonk/codex-pet-collection/main/pets/airi-chibi/preview/idle.gif" alt="艾莉待机动画。" width="96"><br><sub>Airi · 艾莉</sub></td>
+    <td align="center"><a href="https://github.com/lilibonk/codex-pet-collection/tree/main/pets/aira-xinghui"><img src="https://raw.githubusercontent.com/lilibonk/codex-pet-collection/main/pets/aira-xinghui/preview/idle.gif" alt="艾拉·星辉的待机动画。" width="128"></a><br><strong>Aira · 星辉</strong></td>
+    <td align="center"><a href="https://github.com/lilibonk/codex-pet-collection/tree/main/pets/airi-chibi"><img src="https://raw.githubusercontent.com/lilibonk/codex-pet-collection/main/pets/airi-chibi/preview/idle.gif" alt="艾莉的待机动画。" width="128"></a><br><strong>Airi · 艾莉</strong></td>
   </tr>
 </table>
 
-</details>
-
-[浏览宠物与安装说明](https://github.com/lilibonk/codex-pet-collection#readme)
+**[挑一只，带回去 →](https://github.com/lilibonk/codex-pet-collection#readme)**
 
 ## 最近交付
 
-**2026.10.01** · [Apocalypse v0.1.0-rc.1](https://github.com/lilibonk/apocalypse/releases/tag/v0.1.0-rc.1) 发布。
-首个公开发行候选，附带发行说明、安装包与校验文件。
+- **2026.10.09**　[pi-pane](https://github.com/lilibonk/pi-pane) 公开源码。pi 多了一扇窗，终端保住了工位。
+- **2026.10.01**　[Apocalypse v0.1.0-rc.1](https://github.com/lilibonk/apocalypse/releases/tag/v0.1.0-rc.1) 发布。首个公开发行候选，附安装包与校验文件。
 
 ## 代码足迹
 
-一条小蛇，沿着过去一年的公开贡献图走一圈。
+提交过的代码，总得有条蛇替我巡视一下。
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lilibonk/lilibonk/codex/profile-generated/contributions-dark.svg">
   <img src="https://raw.githubusercontent.com/lilibonk/lilibonk/codex/profile-generated/contributions-light.svg" alt="过去一年公开贡献图的金色贪吃蛇动画。" width="100%">
 </picture>
 
-<sub>Build useful things. Keep a little room for play.</sub>
+<sub>如果这里暂时没动静，可能在修 bug，也可能在看猫。</sub>
