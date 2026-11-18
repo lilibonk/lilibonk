@@ -29,8 +29,8 @@ jobs:
         with:
           github_user_name: lilibonk
           outputs: |
-            dist/contributions-light.svg?color_snake=#C99439&color_dots=#F2EDE4,#F0DDBB,#DAB982,#B98A46,#835B25
-            dist/contributions-dark.svg?palette=github-dark&color_snake=#EBC16D&color_dots=#1C222B,#463D2D,#776035,#AC8348,#DFC078
+            dist/contributions-light.svg?color_snake=#B55635&color_dots=#EFEAE1,#E6D1C2,#D5A286,#BC704F,#8E3B20
+            dist/contributions-dark.svg?palette=github-dark&color_snake=#D99B5E&color_dots=#1A1817,#392A23,#654232,#9A5F43,#D48B62
 
       - name: Publish generated images
         shell: bash

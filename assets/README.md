@@ -36,7 +36,7 @@ Edit prompt, applied separately to each original banner:
   (MIT) and committed locally, so the profile does not depend on its live
   rendering service. The generated assets embed Fira Code (SIL OFL 1.1).
   Settings: font Fira Code, weight 500, size 18, duration 2800, pause 1600,
-  vertical center, 480 × 32, colors `B98232` / `E9BD72`, repeating.
+  vertical center, 480 × 32, colors `A64B2C` / `D99B5E`, repeating.
   The upstream copyright notices and licenses are retained in `licenses/`.
 - Contribution animations use [Platane/snk](https://github.com/Platane/snk)
   (MIT). The pinned GitHub Actions workflow updates the public graph daily
